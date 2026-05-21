@@ -1,0 +1,121 @@
+{
+  "guidelines_metadata": {
+    "version": "2026.1.2",
+    "effective_date": "2026-01-01",
+    "authority": "Fannie Mae (FNMA) Conforming and FHA Credit Policy Standards",
+    "policy_reference_hash": "a9f82d1c68e3b3b448a5c104278efc225e01b34e5671d0e561a0b3f8bc911ea4"
+  },
+  "conforming_loan_limits": {
+    "1_unit": 766550,
+    "2_units": 981500,
+    "3_units": 1186350,
+    "4_units": 1474400,
+    "high_cost_areas_1_unit": 1149825
+  },
+  "programs": {
+    "conventional": {
+      "name": "Fannie Mae Conforming Guidelines",
+      "description": "Standard Conventional Conforming Loan Program for qualifying residential properties.",
+      "min_credit_score": 620,
+      "max_ltv_ratios": {
+        "purchase": {
+          "primary_residence_1_unit": 97.0,
+          "second_home_1_unit": 90.0,
+          "investment_1_unit": 85.0
+        },
+        "rate_term_refinance": {
+          "primary_residence_1_unit": 95.0,
+          "second_home_1_unit": 90.0,
+          "investment_1_unit": 75.0
+        },
+        "cash_out_refinance": {
+          "primary_residence_1_unit": 80.0,
+          "second_home_1_unit": 75.0,
+          "investment_1_unit": 75.0
+        }
+      },
+      "max_cltv_ratios": {
+        "purchase": 97.0,
+        "rate_term_refinance": 95.0,
+        "cash_out_refinance": 80.0
+      },
+      "dti_thresholds": {
+        "front_end_limit": 36.0,
+        "back_end_standard": 36.0,
+        "back_end_with_compensating_factors": 45.0,
+        "back_end_max_aus": 50.0
+      },
+      "reserve_requirements_months": {
+        "primary_residence": {
+          "credit_gte_720": 2,
+          "credit_lt_720": 6
+        },
+        "second_home": 6,
+        "investment_property": 6
+      }
+    },
+    "fha": {
+      "name": "FHA Credit Guidelines (HUD 4000.1)",
+      "description": "Government-backed loan program designed for low-to-moderate-income borrowers.",
+      "min_credit_score_standard": 580,
+      "min_credit_score_restricted": 500,
+      "max_ltv_ratios": {
+        "purchase": {
+          "primary_residence_1_unit": 96.5,
+          "second_home_1_unit": 0.0,
+          "investment_1_unit": 0.0
+        },
+        "rate_term_refinance": {
+          "primary_residence_1_unit": 97.75,
+          "second_home_1_unit": 0.0,
+          "investment_1_unit": 0.0
+        },
+        "cash_out_refinance": {
+          "primary_residence_1_unit": 80.0,
+          "second_home_1_unit": 0.0,
+          "investment_1_unit": 0.0
+        }
+      },
+      "max_cltv_ratios": {
+        "purchase": 96.5,
+        "rate_term_refinance": 97.75,
+        "cash_out_refinance": 80.0
+      },
+      "dti_thresholds": {
+        "manual_underwrite_standard": {
+          "front_end_limit": 31.0,
+          "back_end_limit": 43.0
+        },
+        "manual_underwrite_with_compensating_factors": {
+          "front_end_limit": 40.0,
+          "back_end_limit": 50.0
+        },
+        "aus_max_allowable": {
+          "back_end_limit": 57.0
+        }
+      },
+      "reserve_requirements_months": {
+        "purchase_1_unit": 1,
+        "purchase_3_4_units": 3
+      }
+    }
+  },
+  "compensating_factors_definitions": {
+    "liquid_reserves": {
+      "description": "Verified post-closing liquid reserves exceeding standard requirements by at least 3 months.",
+      "compliance_reference": "FNMA B3-6-05 / HUD 4000.1.II.A.5.d.ix"
+    },
+    "minimal_housing_increase": {
+      "description": "New total monthly housing payment (PITIA) does not exceed current housing expense by more than $100 or 10%.",
+      "compliance_reference": "FNMA B3-6-05 / HUD 4000.1.II.A.5.d.ix"
+    },
+    "substantial_additional_income": {
+      "description": "Significant household income that is verified but not included in qualifying income (e.g. part-time income, non-borrower spouse income).",
+      "compliance_reference": "HUD 4000.1.II.A.5.d.ix"
+    },
+    "potential_for_increased_earnings": {
+      "description": "Borrower has documented training, education, or professional certification that strongly indicates career advancement and earnings growth.",
+      "compliance_reference": "FNMA B3-6-05"
+    }
+  }
+}
