@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Mortgage Underwriting Model Context Protocol (MCP) Server
+Architected & Engineered by Avneet Pandey
+
 An enterprise-grade, deterministic MCP server for automated credit decisioning, 
 debt-to-income (DTI) calculations, loan-to-value (LTV) limits, and audit trails.
 

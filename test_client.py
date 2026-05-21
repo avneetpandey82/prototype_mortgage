@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Mortgage Underwriting MCP Server Integration Test Client
+Architected & Engineered by Avneet Pandey
+
 Simulates an MCP client by spawning the underwriting server as a subprocess,
 sending JSON-RPC payloads via standard input, and verifying the responses.
 """
