@@ -50,8 +50,8 @@ By using the Model Context Protocol (MCP), I could expose my compliance rules as
 
 ### Step 3: My Implementation & Resolution
 To prove this architecture, I built this pristine prototype from the ground up:
-1. **I Codified the Credit Rules**: I created a structured guidelines database ([`guidelines.json`](file:///c:/Users/LENOVO/Desktop/Freelance/Mortgage/Prototype/guidelines.json)) to act as my single source of truth for Conventional and FHA policies, complete with cryptographic version hashing.
-2. **I Built the Protocol Server**: I developed a dependency-free, standard-library-only Python server ([`underwriting_mcp_server.py`](file:///c:/Users/LENOVO/Desktop/Freelance/Mortgage/Prototype/underwriting_mcp_server.py)) that handles MCP initialization and JSON-RPC message passing.
+1. **I Codified the Credit Rules**: I created a structured guidelines database ([`guidelines.json`](guidelines.json)) to act as my single source of truth for Conventional and FHA policies, complete with cryptographic version hashing.
+2. **I Built the Protocol Server**: I developed a dependency-free, standard-library-only Python server ([`underwriting_mcp_server.py`](underwriting_mcp_server.py)) that handles MCP initialization and JSON-RPC message passing.
 3. **I Engineered the Mathematical Tools**: I wrote robust functions (`calculate_dti`, `calculate_ltv_cltv`, `evaluate_loan_compliance`) that validate every credit parameter deterministically.
 4. **I Implemented Compliance Guardrails**: I added cryptographic audit trails, adverse action explanation mapping, and Fair Lending warning blocks directly into the tool output, ensuring every decision is 100% reproducible and auditable.
 
@@ -385,7 +385,7 @@ I configured all system logs to be emitted in JSON format via `sys.stderr` to av
    ```
 
 ### 7.3 Configuring in Desktop Agents (e.g., Claude Desktop)
-To register this underwriting compliance engine in Claude Desktop, add my server to your `claude_desktop_config.json` configuration file:
+To register this underwriting compliance engine in Claude Desktop, add my server to your `claude_desktop_config.json` configuration file (substituting `/path/to/your/cloned/repository/` with the absolute path to where you cloned this repository on your local machine):
 
 *   **Windows Path**: `%APPDATA%\Claude\claude_desktop_config.json`
 *   **macOS Path**: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -396,7 +396,7 @@ To register this underwriting compliance engine in Claude Desktop, add my server
     "mortgage-underwriting": {
       "command": "python",
       "args": [
-        "c:/Users/LENOVO/Desktop/Freelance/Mortgage/Prototype/underwriting_mcp_server.py"
+        "/path/to/your/cloned/repository/underwriting_mcp_server.py"
       ]
     }
   }
